@@ -71,37 +71,7 @@
         </div>
 
               
-        <script>
-            function generarCodigoAleatorio() {
-              var caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-              var codigoAleatorio = '';
-              for (var i = 0; i < 10; i++) {
-                var indiceAleatorio = Math.floor(Math.random() * caracteres.length);
-                codigoAleatorio += caracteres.charAt(indiceAleatorio);
-              }
-              return codigoAleatorio;
-            }
-        
-            function asignarEnlaceConCodigo() {
-              var inputElement = document.getElementById('link');
-              var baseURL = 'https://t.me/CanalOficialZackBot/Identificador';
-        
-              // Verifica si ya se generó un código aleatorio
-              var codigoGuardado = localStorage.getItem('codigoAleatorio');
-        
-              if (!codigoGuardado) {
-                var codigoAleatorio = generarCodigoAleatorio();
-                localStorage.setItem('codigoAleatorio', codigoAleatorio);
-                codigoGuardado = codigoAleatorio;
-              }
-        
-              inputElement.value = baseURL + codigoGuardado;
-            }
-        
-            // Asigna el código aleatorio al cargar la página solo si no se ha hecho antes
-            window.onload = asignarEnlaceConCodigo;
-          </script>
-
+     
 
  <div class="frens-invite">
         <div class="frens-invite-button">
